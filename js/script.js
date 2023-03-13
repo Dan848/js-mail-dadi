@@ -15,8 +15,23 @@ const btnDice = document.getElementById("diceBtn");
 btnDice.addEventListener("click", rollDice);
 
 function rollDice (){
+    const score = document.querySelector("h6");
+    if (score) score.remove();
     const playerScore = dice[Math.floor(Math.random() * dice.length)];
     const cpuScore = dice[Math.floor(Math.random() * dice.length)];
-    console.log (playerScore, cpuScore);
+    const scorePrint = document.createElement("h6");
+    scorePrint.classList.add("text-white");
+    const diceCol = document.getElementById("diceCol");
+    diceCol.append(scorePrint)
+    
+    if (playerScore > cpuScore){
+        scorePrint.innerHTML = `HAI VINTO! Il tuo punteggio è ${playerScore}, quello della CPU è ${cpuScore}`;
+    }
+    else if (playerScore < cpuScore){
+        scorePrint.innerHTML = `HAI PERSO! Il tuo punteggio è ${playerScore}, quello della CPU è ${cpuScore}`;
+    }
+    else {
+        scorePrint.innerHTML = `PAREGGIO! Il tuo punteggio è ${playerScore}, quello della CPU è ${cpuScore}`
+    }
 }
 
