@@ -12,8 +12,22 @@
     <h1 class="mt-3 mb-5 text-center text-white">Controlla la Mail o Gioca ai dadi</h1>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-6 col-12 px-5"></div>
-            <div id="diceCol" class="col-md-6 col-12 px-5 text-center"><button class="btn btn-success mb-3" id="diceBtn" >Premi qui per tirare i dadi invisibili immaginari magici</button></div>
+            <div class="col-md-6 col-12 px-3 text-center mb-4">
+                <div id="mailCard" class="card bg-success p-2">
+                    <div class="card-title"><h2 class="text-white">Controlla l'email</h2></div>
+                    <label class="text-white" for="userMail">Inserisci la tua email es (sono.un.tutor@possoaccedere.it)</label>
+                    <input class="mb-3 mt-1 rounded-2 border-0" type="email" id="userMail" name="userMail">
+                    <button class="btn btn-light mb-3 fw-medium" id="mailBtn">Sono nella lista?</button>
+                </div>
+            </div>    
+
+            <div class="col-md-6 col-12 px-3 text-center mb-4">
+                <div id="diceCard" class="card bg-success p-2">
+                    <div class="card-title"><h2 class="text-white">Gioca a Dadi</h2></div>
+
+                    <button class="btn btn-light mb-3 fw-medium" id="diceBtn">Premi qui per tirare i dadi invisibili immaginari magici</button>
+                </div>
+            </div>
         </div>
     </div>
 <script src="./js/script.js"></script>
