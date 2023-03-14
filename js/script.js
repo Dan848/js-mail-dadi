@@ -84,7 +84,7 @@ function checkMail () {
     //...per verificare con un ciclo se il valore della input bar è contenuto almeno una volta nell'array
 
     //6) Con un ciclo for controlla ogni elemento
-    for (let i = 0; i < fakeEmail.length - 1; i++) {
+    for (let i = 0; i < fakeEmail.length; i++) {
         if (userMail.toLowerCase() === fakeEmail[i].toLowerCase()){
             //7) Cambia valore alla variabile se trova un elemento uguale
             access = true;
